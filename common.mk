@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/exynos9810-common
+COMMON_PATH := device/samsung/universal9611-common
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/exynos9810-common/exynos9810-common-vendor.mk)
+$(call inherit-product, vendor/samsung/universal9611-common/universal9611-common-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay

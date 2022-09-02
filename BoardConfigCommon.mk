@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/exynos9810-common
+COMMON_PATH := device/samsung/universal9611-common
 
 BUILD_BROKEN_DUP_RULES := true
 
@@ -21,7 +21,7 @@ BUILD_BROKEN_DUP_RULES := true
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 ## Inherit proprietary vendor configuration
-include vendor/samsung/exynos9810-common/BoardConfigVendor.mk
+include vendor/samsung/universal9611-common/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := arm64
@@ -72,7 +72,7 @@ TARGET_SEC_FP_HAS_FINGERPRINT_GESTURES := true
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos9810
+TARGET_KERNEL_SOURCE := kernel/samsung/universal9611
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
@@ -92,10 +92,10 @@ BOARD_ROOT_EXTRA_FOLDERS := efs
 
 ## Platform
 BOARD_VENDOR := samsung
-TARGET_BOARD_PLATFORM := universal9810
+TARGET_BOARD_PLATFORM := exynos5
 TARGET_SLSI_VARIANT := bsp
-TARGET_SOC := exynos9810
-TARGET_BOOTLOADER_BOARD_NAME := exynos9810
+TARGET_SOC := exynos9611
+TARGET_BOOTLOADER_BOARD_NAME := universal9611
 
 ## Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop

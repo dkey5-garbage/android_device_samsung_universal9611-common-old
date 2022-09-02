@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter starlte star2lte crownlte, $(TARGET_DEVICE)),)
+ifneq ($(filter a51 m21 m31 m31s, $(TARGET_DEVICE)),)
 
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))

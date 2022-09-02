@@ -28,11 +28,16 @@ static inline const char* getBTDefaultName()
     char device[PROPERTY_VALUE_MAX];
     property_get("ro.product.device", device, "");
 
-    if (!strcmp("crownlte", device)) {
-        return "Galaxy note 9";
-    }
-    
-    return "Galaxy S9";
+    if (!strcmp("a51", device))
+	    return "Galaxy A51";
+    if (!strcmp("m21", device))
+	    return "Galaxy M21";
+    if (!strcmp("m31", device))
+	    return "Galaxy M31";
+    if (!strcmp("m31s", device))
+	    return "Galaxy M31s";
+
+    return "";
 }
 
 #define BTM_DEF_LOCAL_NAME getBTDefaultName()
